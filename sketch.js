@@ -16,6 +16,7 @@ function preload(){
   punch = loadImage("fist.png");
   bg = loadImage("background.jpg");
   blocksImg = loadImage("bricks.png"); 
+  heartImg = loadImage("heart.png");
 }
 
 function setup() {
@@ -151,7 +152,7 @@ function spawnBlocks() {
 function spawnLife(){
   if(frameCount %200 === 0){
     var life = createSprite(random(20,1080),10)
-    life.addImage(punch);
+    life.addImage(heartImg);
     life.scale = 0.2;
     life.velocityY = 7;
     Lgroup.add(life)
